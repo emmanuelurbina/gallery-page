@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+.container,
+footer {
+    margin: 5em;
+}
+
+footer {
+    text-align: center;
+    color: gray;
+}
+
+footer a {
+    text-decoration: none;
+    color: gray;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    grid-template-areas: "image-1 image-1 image-2 image-2 image-2 image-2" "image-3 image-3 image-3 image-3 image-4 image-4" "image-5 image-5 image-6 image-6 image-4 image-4";
+    justify-items: center;
+}
+
+.img {
+    border-radius: 15px;
+}
+
+.img-pic {
+    width: 20%;
+    border-radius: 80px;
+    margin-bottom: 0;
+}
+
+.image-1 {
+    width: 100%;
+    grid-area: image-1;
+}
+
+.image-2 {
+    width: 100%;
+    grid-area: image-2;
+}
+
+.image-3 {
+    width: 100%;
+    grid-area: image-3;
+}
+
+.image-4 {
+    width: 100%;
+    grid-area: image-4;
+}
+
+.image-5 {
+    width: 100%;
+    grid-area: image-5;
+}
+
+.image-6 {
+    width: 100%;
+    grid-area: image-6;
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.profile-info {
+    display: block;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.name {
+    font-size: 48px;
+    font-weight: 500;
+}
+
+.muted {
+    color: gray;
+    font-size: 14px;
+}
+
+.item {
+    display: inline-block;
+    padding-right: 1em;
+    padding-left: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background-color: lightgrey;
+    border-radius: 15px;
+    width: 100px;
+    margin-right: 25px;
+}
+
+@media screen and (max-width: 900px) {
+    .container,
+    footer {
+        margin: 1em;
+    }
+    footer {
+        position: fixed;
+        bottom: 0;
+    }
+    .img-pic {
+        width: 40%;
+        border-radius: 35px;
+    }
+    .name {
+        font-size: 24px;
+    }
+    .muted {
+        font-size: 10px;
+    }
+    .item {
+        font-size: 12px;
+        direction: initial;
+        width: 50px;
+        margin-right: 5px;
+    }
+}
